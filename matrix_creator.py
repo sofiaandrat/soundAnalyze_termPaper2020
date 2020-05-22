@@ -11,7 +11,6 @@ class VolumeMatrix:
         self.range = range
         self.tstep = tstep
         self.spectrum = None
-        self.peaks = []
         self.matrix = []
         self.dict = {}
         self.table = None
@@ -32,7 +31,6 @@ class VolumeMatrix:
         self.matrix = []
         for i in range(counter):
             self.matrix.append([])
-        # self.matrix = numpy.array(self.matrix)
 
     def __fill_matrix__(self):
         counter = int((self.wave.ts[-1] - self.wave.ts[0]) // self.tstep)
