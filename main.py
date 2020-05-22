@@ -10,7 +10,7 @@ from thinkdsp import read_wave, decorate  # no pep8
 
 if __name__ == "__main__":
 
-    src = 'D:/курсач/songs data/три белых коня/after/DaryaLoban.mp3'
+    src = '~PATH_TO_THE_SOUND_SOURCE/[file_name.mp3 or file_name.wav]'
     if 'mp3' in src:
         src = fromMp3ToWav(src)
     wave = read_wave(src)
