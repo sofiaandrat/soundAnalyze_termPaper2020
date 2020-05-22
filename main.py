@@ -20,9 +20,6 @@ if __name__ == "__main__":
     const_map = ConstellationMap(matrix)
     const_map.find_stars()
     stars = const_map.data_for_map_drawing
-    f = open("output.txt", "w+")
-    f.write(str(const_map))
-    f.close()
     labels = range(1, len(stars) + 1)
     plt.figure(figsize=const_map.figsize)
     plt.subplots_adjust(bottom=0.1)
