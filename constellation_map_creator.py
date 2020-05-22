@@ -26,7 +26,7 @@ class ConstellationMap:
         extrema = diff[np.abs(diff) < tolerance]
         return extrema
 
-    def __create_map__(self, tolerance=5):
+    def __create_map__(self, tolerance=8):
         self.map = self.extremums
         self.map = self.map.fillna(0)
         self.map = self.map.mask(abs(self.map) < tolerance, 0)
@@ -36,4 +36,4 @@ class ConstellationMap:
                 if element > 0:
                     self.data_for_map_drawing.append([time[0] * self.tstep, freq])
         self.data_for_map_drawing = np.array(self.data_for_map_drawing)
-        self.figsize = (self.map.values.shape[0] // 5, self.map.values.shape[1] // 1.5)
+        self.figsize = (self.map.values.shape[0] // 15, self.map.values.shape[1] // 4)
